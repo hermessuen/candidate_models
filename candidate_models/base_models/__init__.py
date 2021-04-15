@@ -239,7 +239,7 @@ def cornet(*args, **kwargs):  # wrapper to avoid having to import cornet at top-
 
 
 def texture_vs_shape(model_identifier, model_name):
-    from texture_vs_shape.load_pretrained_models import load_model
+    from texture_vs_shape.models.load_pretrained_models import load_model
     model = load_model(model_name)
     from model_tools.activations.pytorch import load_preprocess_images
     preprocessing = functools.partial(load_preprocess_images, image_size=224)
